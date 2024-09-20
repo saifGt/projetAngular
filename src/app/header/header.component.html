@@ -1,0 +1,27 @@
+<p>header works!</p>
+
+<input type="button" value="Click me" (click)="sayHello()">
+
+<div [style.backgroundColor] = "color">
+    un message simple 
+</div>
+
+<input type="text" [(ngModel)]="color">
+
+{{color|uppercase}}
+
+<div *ngFor="let u of user">
+    {{u.name}}
+    {{u.age}}
+    {{u.quantité}}
+    
+    <span *ngIf="u.quantité==0">
+        <input type="submit" value="buy" [disabled]="true">
+    </span>
+
+    <span *ngIf="u.quantité==0">
+        <input type="submit" value="buy" [disabled]="false">
+    </span>
+    
+
+</div>
